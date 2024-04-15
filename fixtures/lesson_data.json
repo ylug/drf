@@ -1,0 +1,79 @@
+[
+  {
+    "model": "courses.lesson",
+    "pk": 1,
+    "fields": {
+      "courses": 3,
+      "title": "первый урок первого курса питон",
+      "photo": "",
+      "content": "контент первого  урока первого курса питон",
+      "link_video": "https://www.youtube.com/lesson/1"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 2,
+    "fields": {
+      "courses": 3,
+      "title": "второй урок первого курса питон",
+      "photo": "",
+      "content": "контент второго урока первого курса питон",
+      "link_video": "https://www.youtube.com/lesson/2"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 3,
+    "fields": {
+      "courses": 4,
+      "title": "первый урок второго курса бекенд питон",
+      "photo": "",
+      "content": "контент первый урок второго курса бекенд питон",
+      "link_video": "https://www.youtube.com/lesson/1"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 4,
+    "fields": {
+      "courses": 4,
+      "title": "второй урок второго курса бекенд питон",
+      "photo": "",
+      "content": "контент второго урока второго курса бекенд питон",
+      "link_video": "https://www.youtube.com/lesson/2"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 5,
+    "fields": {
+      "courses": 5,
+      "title": "первый урок третий курс бекенд питон",
+      "photo": "",
+      "content": "контент первого урока курс бекенд питон",
+      "link_video": "https://www.youtube.com/lesson/1"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 6,
+    "fields": {
+      "courses": 6,
+      "title": "первый урок фронтенда курс фронтенда java",
+      "photo": "",
+      "content": "контент первого урока фронтенда курс фронтенда java",
+      "link_video": "https://www.youtube.com/lesson/1"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 7,
+    "fields": {
+      "courses": 6,
+      "title": "второй урок фронтенда курс фронтенд java",
+      "photo": "",
+      "content": "контент второго урока фронтенда курс фронтенд java",
+      "link_video": "https://www.youtube.com/lesson/2"
+    }
+  }
+]
