@@ -1,0 +1,90 @@
+[
+    {
+        "model": "materials.course",
+        "pk": 1,
+        "fields": {
+            "name": "Python course",
+            "preview": "",
+            "description": "Best course of python",
+            "owner": 3
+        }
+    },
+    {
+        "model": "materials.course",
+        "pk": 2,
+        "fields": {
+            "name": "English course",
+            "preview": "",
+            "description": "Best course of english",
+            "owner": 3
+        }
+    },
+    {
+        "model": "materials.course",
+        "pk": 3,
+        "fields": {
+            "name": "Test course",
+            "preview": "",
+            "description": "Best course of test",
+            "owner": 2
+        }
+    },
+    {
+        "model": "materials.course",
+        "pk": 4,
+        "fields": {
+            "name": "Test2 course",
+            "preview": "",
+            "description": "Best course of best3",
+            "owner": 2
+        }
+    },
+    {
+        "model": "materials.lesson",
+        "pk": 1,
+        "fields": {
+            "name": "Data types",
+            "preview": "",
+            "description": "All types of data types in Python",
+            "url": null,
+            "course": 1,
+            "owner": 2
+        }
+    },
+    {
+        "model": "materials.lesson",
+        "pk": 2,
+        "fields": {
+            "name": "ORM Django",
+            "preview": "",
+            "description": "Structure and operating principle of ORM Django",
+            "url": null,
+            "course": 1,
+            "owner": 3
+        }
+    },
+    {
+        "model": "materials.lesson",
+        "pk": 4,
+        "fields": {
+            "name": "Test2 Django",
+            "preview": "",
+            "description": "Test2",
+            "url": null,
+            "course": 1,
+            "owner": 1
+        }
+    },
+    {
+        "model": "materials.lesson",
+        "pk": 5,
+        "fields": {
+            "name": "Test3 Django",
+            "preview": "",
+            "description": "Test3",
+            "url": null,
+            "course": 1,
+            "owner": 3
+        }
+    }
+]

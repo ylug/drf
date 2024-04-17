@@ -1,0 +1,120 @@
+[
+    {
+        "model": "users.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$IxofjDjBhdgYRI5f0n1q1Q$rljed99TLJanlA88LIiCmSi9AxGciCZbked2qqXhCmQ=",
+            "last_login": null,
+            "is_superuser": false,
+            "first_name": "",
+            "last_name": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-02-17T11:50:24Z",
+            "email": "staslaty@bk.ru",
+            "phone": null,
+            "city": "Krasnodar",
+            "avatar": "",
+            "groups": [
+                1
+            ],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$7GAUwC6r4NU5ExTZdeLJ7u$GEXOyLLo5L5IovvaEXEO9DbcaRwUwShkY+C7WVlTZkc=",
+            "last_login": null,
+            "is_superuser": false,
+            "first_name": "",
+            "last_name": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-02-17T11:50:24.154Z",
+            "email": "test@test.ru",
+            "phone": "",
+            "city": "Donetsk",
+            "avatar": "",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$HTTMbK79riaGIidZRRZO2w$ZPJUipZtctm6QY/NvJPBDzbW4WK63ToZaIdtEQtoeCM=",
+            "last_login": null,
+            "is_superuser": false,
+            "first_name": "",
+            "last_name": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-02-17T11:50:24.155Z",
+            "email": "musician80level@gmail.com",
+            "phone": "",
+            "city": "Vancouver",
+            "avatar": "",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.user",
+        "pk": 5,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$5bWfDKfesSqtWabF29Lujn$oN3/e2PGD30vXBs1xP4sKZEHb9ChQhkFtEC0fjd6ayo=",
+            "last_login": "2024-02-20T15:24:34.751Z",
+            "is_superuser": true,
+            "first_name": "Admin",
+            "last_name": "Adminov",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-02-20T11:45:59.762Z",
+            "email": "stasyllius@yandex.ru",
+            "phone": null,
+            "city": null,
+            "avatar": "",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "users.payments",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "date_payment": "2024-02-16",
+            "paid_course": 1,
+            "paid_lesson": 1,
+            "payment_amount": "80.00",
+            "payment_method": "CASH"
+        }
+    },
+    {
+        "model": "users.payments",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "date_payment": "2024-02-16",
+            "paid_course": null,
+            "paid_lesson": 2,
+            "payment_amount": "20.00",
+            "payment_method": "TRANSFER"
+        }
+    },
+    {
+        "model": "users.payments",
+        "pk": 3,
+        "fields": {
+            "user": 3,
+            "date_payment": "2024-02-16",
+            "paid_course": 1,
+            "paid_lesson": null,
+            "payment_amount": "60.00",
+            "payment_method": "TRANSFER"
+        }
+    }
+]

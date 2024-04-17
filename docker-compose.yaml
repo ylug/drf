@@ -1,0 +1,72 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTRGES_DB=${DB_NAME}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - pg_data:/var/lib/postgressql/data/pgdata
+    ports:
+      - '5433:5432'
+    networks:
+      - drf_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    tty: true
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    env_file:
+      - .env
+    ports:
+      - '8000:8000'
+    networks:
+      - drf_net
+    volumes:
+      - .:/code
+    depends_on:
+      db:
+        condition: service_healthy
+
+  redis:
+    image: redis:alpine
+    ports:
+      - '6380:6379'
+    networks:
+      - drf_net
+
+  celery:
+    build: .
+    tty: true
+    command: celery -A config worker -l INFO
+    depends_on:
+      - redis
+      - app
+    networks:
+      - drf_net
+
+  celery_beat:
+    build: .
+    restart: always
+    tty: true
+    command: celery -A config beat -l info -S django
+    depends_on:
+      - redis
+      - app
+    networks:
+      - drf_net
+
+volumes:
+  pg_data:
+
+networks:
+  drf_net:
+    driver: bridge
