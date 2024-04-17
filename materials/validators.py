@@ -1,6 +1,14 @@
-from rest_framework.serializers import ValidationError
+from rest_framework import serializers
 
+GOOD_URL = "https://www.youtube.com/"
 
-def url_validator(url):
-    if url and 'youtube.com' not in url:
-        raise ValidationError('Недопустимая ссылка')
+class ProhibitedUrlValidator:
+
+    def __init__(self, field):
+        self.field = field
+
+    def __call__(self, value):
+        data_url = dict(value).get(self.field)
+
+        if GOOD_URL not in data_url:
+            raise serializers.ValidationError("Нельзя использовать ссылки на сторонние сайты")

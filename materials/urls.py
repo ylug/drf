@@ -1,20 +1,21 @@
 from django.urls import path
-
 from materials.apps import MaterialsConfig
 from rest_framework.routers import DefaultRouter
 
-from materials.views import CourseViewSet, LessonCreateApiView, LessonListView, LessonRetrieveView, LessonUpdateView, \
-    LessonDestroyView
+from materials.views import CourseViewSet, LessonCreateAPIView, LessonDestroyView, LessonListAPIView, LessonRetrieveView, LessonUpdateView, PaymentCreateView, SubscriptionView
 
 app_name = MaterialsConfig.name
+
 router = DefaultRouter()
-router.register(r'course', CourseViewSet, basename='course')
+router.register(r'courses', CourseViewSet, basename='courses')
+
 
 urlpatterns = [
-                  path('lesson/create/', LessonCreateApiView.as_view(), name='lesson_create'),
-                  path('lesson/list/', LessonListView.as_view(), name='lesson_list'),
-                  path('lesson/view/<int:pk>/', LessonRetrieveView.as_view(), name='lesson_view'),
-                  path('lesson/update/<int:pk>/', LessonUpdateView.as_view(), name='lesson_update'),
-                  path('lesson/delete/<int:pk>/', LessonDestroyView.as_view(), name='lesson_delete'),
-
-              ] + router.urls
+    path('lesson/create/', LessonCreateAPIView.as_view(), name='lesson-create'),
+    path('lesson/', LessonListAPIView.as_view(), name='lesson-list'),
+    path('lesson/<int:pk>/', LessonRetrieveView.as_view(), name='lesson-get'),
+    path('lesson/<int:pk>/update/', LessonUpdateView.as_view(), name='lesson-update'),
+    path('lesson/<int:pk>/delete/', LessonDestroyView.as_view(), name='lesson-delete'),
+    path('subscription/', SubscriptionView.as_view(),name='subscription'),
+    path('payment/create/', PaymentCreateView.as_view(), name='payment_create'),
+] + router.urls
